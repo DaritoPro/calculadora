@@ -1,18 +1,29 @@
-const equal = document.getElementById('=')
-const ac = document.getElementById('ac')
-const de = document.getElementById('de')
-const division = document.getElementById('/')
-const multiplicasion = document.getElementById('*')
-const suma = document.getElementById('+')
-const resta = document.getElementById('-')
-const num1 = document.getElementById('1')
-const num2 = document.getElementById('2')
-const num3 = document.getElementById('3')
-const num4 = document.getElementById('4')
-const num5 = document.getElementById('5')
-const num6 = document.getElementById('6')
-const num7 = document.getElementById('7')
-const num8 = document.getElementById('8')
-const num9 = document.getElementById('9')
-const num0 = document.getElementById('0')
-const num00 = document.getElementById('00')
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('#calculator button');
+
+let currentInput = '';
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const value = btn.textContent;
+
+        if (btn.id === 'ac') {
+            currentInput = '';
+            display.value = '';
+        } else if (btn.id === 'de') {
+            currentInput = currentInput.slice(0, -1);
+            display.value = currentInput;
+        } else if (btn.id === '=') {
+            try {
+                currentInput = eval(currentInput).toString();
+                display.value = currentInput;
+            } catch {
+                display.value = 'Error';
+                currentInput = '';
+            }
+        } else {
+            currentInput += value;
+            display.value = currentInput;
+        }
+    });
+});
