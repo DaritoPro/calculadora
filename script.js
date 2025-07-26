@@ -1,6 +1,8 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('#calculator button');
 
+alert('Bienvenido a una calculadora hecha por David, aca podrás hacer operaciones básicas como suma, resta, multiplicación y división. Para borrar todo presiona "AC", para borrar el último número presiona "DE" y para calcular presiona "="');
+
 let currentInput = '';
 
 buttons.forEach(btn => {

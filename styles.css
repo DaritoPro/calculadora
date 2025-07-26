@@ -1,7 +1,6 @@
 body {
     text-align: center;
     margin: 0;
-    background-color: #2c93bee3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,17 +45,17 @@ button {
 }
 
 button.operator {
-    background-color: #3344da;
+    background-color: #8b93da;
     color: #fff;
 }
 
 button#ac {
-    background-color: #3ad6a2;
+    background-color: #13f3a8;
     color: #fff;
 }
 
 button.equal {
-    background-color: #f39c12;
+    background-color: #7b0480;
     color: #fff;
     width: 47%;
 }
@@ -103,3 +102,34 @@ body {
   100% {
     background-color: black;
   }
+  110% {
+    background-color: rgb(32, 22, 22);
+  }
+  120% {
+    background-color: rgb(87, 145, 145);
+  }
+  130% {
+    background-color: rgb(255, 21, 150);
+  }
+  140% {
+    background-color: rgb(0, 32, 121);
+  }
+  150% {
+    background-color: rgb(202, 101, 71);
+  }
+  160% {
+    background-color: rgb(236, 31, 59);
+  }
+  170% {
+    background-color: rgb(168, 15, 189);
+  }
+  180% {
+    background-color: rgb(72, 50, 194);
+  }
+  190% {
+    background-color: rgb(179, 209, 10);
+  }
+  200% {
+    background-color: rgb(150, 73, 42);
+  }
+}
